@@ -31,7 +31,7 @@ def asciify(s, font, width):
         return t2
 
 
-result = random_asciify('peter likes cock', 80)
+result = random_asciify('appropriete message', 80)
 print result if result != None else 'Didnt work'
 
 
