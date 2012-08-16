@@ -1,0 +1,14 @@
+{
+    "name": "funny"
+  , "version": "0.0.1"
+  , "description": "Makes funny ascii animals"
+  , "keywords": ["funny", "ascii", "animal", "progress", "bar"]
+  , "author": "Ilya Volodarsky <ilya@segment.io>"
+  , "engines": { "node": ">= 0.6.0" }
+  , "dependencies":{
+      "winston": "*"
+    , "underscore": "*"
+    , "express": "3.X"
+
+  }
+}

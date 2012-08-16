@@ -1,0 +1,18 @@
+
+# Extensions
+*.monitor
+*.pyc
+*.log
+
+logs/*
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+node_modules

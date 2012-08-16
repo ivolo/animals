@@ -12,14 +12,16 @@ fonts = [ '3-d', '3x5', '5lineoblique', 'acrobatic', 'alligator', 'alligator2', 
 def get_random_font():
     return fonts[int(uniform(0, len(fonts)))]
 
+
 def random_asciify(s, width):
     font = get_random_font()
     print font
-    return asciify(s, font, width) 
-    
+    return asciify(s, font, width)
+
+
 def asciify(s, font, width):
     data = {'TEXT': s, 'x': 0, 'y': 0, 'FONT': font, 'RICH': 'no', 'FORM': 'left', 'STRE': 'no', 'WIDT': width}
-    query_string = urlencode(data)    
+    query_string = urlencode(data)
     url = '{0}?{1}'.format('http://www.network-science.de/ascii/ascii.php', query_string)
     r = requests.get(url)
     if r.status_code != 200:
@@ -33,5 +35,3 @@ def asciify(s, font, width):
 
 result = random_asciify('appropriete message', 80)
 print result if result != None else 'Didnt work'
-
-

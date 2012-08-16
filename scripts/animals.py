@@ -2,13 +2,14 @@ import requests
 import BeautifulSoup as soup
 
 from os.path import exists
-from pickle import load, dump
 from random import uniform
 
 SEPERATOR = '===============++++SEPERATOR++++====================\n'
 DEFAULT_FILENAME = 'animals.saved'
 
+
 def get_animals():
+
     r = requests.get('http://www.heartnsoul.com/ascii_art/ascii_animals_indx.htm')
     s = soup.BeautifulSoup(r.content)
     animals = []
@@ -26,8 +27,9 @@ def get_animals():
             else:
                 animal += line + '\n'
                 lines_added += 1
-    
+
     return animals
+
 
 def save_animals(animals, filename=DEFAULT_FILENAME):
     f = open(filename, 'w+')
@@ -35,6 +37,7 @@ def save_animals(animals, filename=DEFAULT_FILENAME):
         f.write(animal)
         f.write(SEPERATOR)
     f.close()
+
 
 def load_animals(filename=DEFAULT_FILENAME):
     if exists(filename):
@@ -49,10 +52,12 @@ animals = load_animals()
 if animals == None:
     animals = get_animals()
     save_animals(animals)
-    
+
 import fish
+
+
 class CustomLook(fish.MultiLineFishPrinter):
-    
+
     def __init__(self, s):
         self.renderable = fish.docstring2lines(s)
 
@@ -60,6 +65,6 @@ class CustomLook(fish.MultiLineFishPrinter):
         return self.renderable
 
     own_length = len(renderable[0])
-    
+
 random_animal = animals[int(uniform(0, len(animals)))]
 
