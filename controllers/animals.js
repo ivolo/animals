@@ -26,7 +26,9 @@ var chooseUsingDimensions = function (req, index) {
 
         for (var i = 0; i < len; i += 1) {
 
-            var dims = animals.dimensions(index);
+            var animal = animals.get(index);
+
+            var dims = animals.dimensions(animal);
             var satisfied = true;
 
             if (maxWidth && dims.width > maxWidth) {
@@ -60,9 +62,9 @@ var getIndex = function (req) {
     return index;
 };
 
-var getReverse = function (req) {
+var getBoolean = function (req, key) {
 
-    var reverse = req.param('reverse');
+    var reverse = req.param(key);
 
     if (_.isString(reverse)) reverse = reverse.toLowerCase();
 
@@ -77,11 +79,31 @@ exports.home = function (req, res, next) {
     var index = chooseUsingDimensions(req, getIndex(req));
 
     var offset = getNumber(req, 'offset');
-    var reverse = getReverse(req);
+    var reverse = getBoolean(req, 'reverse');
+
+    var terminal = getBoolean(req, 'terminal');
 
     var animal = animals.get(index, offset, reverse);
 
+    if (terminal) {
+
+        var dims = animals.dimensions(animal);
+
+        var ansi = '';
+
+        //
+        /// Method 1
+        //
+
+        _.each(_.range(dims.height-1), function () {
+            ansi += '\x1b[2K\r' + '\x1b[1F';
+        });
+
+        animal = ansi + animal;
+    }
+
     res.set('Content-Type', 'text/plain; charset=utf-8');
+
     res.send(animal);
 };
 
@@ -89,5 +111,7 @@ exports.dimensions = function (req, res, next) {
 
     var index = getIndex(req);
 
-    res.json(animals.dimensions(index));
+    var animal = animals.get(index);
+
+    res.json(animals.dimensions(animal));
 };

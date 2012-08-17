@@ -1,11 +1,13 @@
 
+import os
+import sys
 import requests
 from random import randint
 from time import sleep
 
 
+# from http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python
 def getTerminalSize():
-    import os
     env = os.environ
 
     def ioctl_GWINSZ(fd):
@@ -35,45 +37,75 @@ def getTerminalSize():
     return int(cr[1]), int(cr[0])
 
 
-ANIMAL_URL = 'http://localhost'
+def next_frame(index=0, offset=0, reverse=False,
+    maxwidth=0, maxheight=0, terminal=False):
 
-
-def next_frame(index=0, offset=0, reverse=False, maxwidth=0, maxheight=0):
+    ANIMAL_URL = 'http://localhost'
 
     payload = {
         "index": index,
         "offset": offset,
         "reverse": reverse,
         "maxwidth": maxwidth,
-        "maxheight": maxheight
+        "maxheight": maxheight,
+        "terminal": terminal
     }
 
-    return '\033[2J' + requests.get(ANIMAL_URL, params=payload).text
+    return requests.get(ANIMAL_URL, params=payload).text
 
 
-dims = getTerminalSize()
+class ProgressBar:
 
-index = randint(0, 500)
+    def __init__(self):
+        self.dims = getTerminalSize()
+        # pick a random animal
+        self.index = randint(0, 500)
 
-counter = 0
-increment = 1
-offset = 0
-steps = 10
-reverse = False
+        # how many times we've iterated
+        self.counter = 0
+        # specifies the direction in which the animal is offset
+        self.increment = 1
+        # the total offset from the left
+        self.offset = 0
+        # the amount of steps the animal travels before turning around
+        self.steps = 10
+        # whether its reverse or not
+        self.reverse = False
 
-while True:
-    offset = (offset + increment)
-    if offset % steps == 0:
-        reverse = not reverse
-        increment = -1 * increment
-        dims = getTerminalSize()
+    def step(self):
+         # the amount to offset the animal from the left
+        self.offset = (self.offset + self.increment)
 
-    animal = next_frame(index, offset, reverse,
-        maxwidth=dims[0], maxheight=dims[1])
+        # if we're at the beggining or end of the screen, reverse!
+        if self.offset % self.steps == 0:
+            # flip direction
+            self.reverse = not self.reverse
+            self.increment = -1 * self.increment
 
-    animal_width = len(animal.split('\n')[0]) - offset
-    steps = dims[0] - animal_width
+            # update terminal dimensions in case they changed
+            self.dims = getTerminalSize()
 
-    print animal
+        # get the next frame
+        animal = next_frame(self.index, self.offset, self.reverse,
+            maxwidth=self.dims[0], maxheight=self.dims[1],
+            terminal=(self.counter > 0))
 
-    sleep(0.05)
+        # split the animal into lines
+        lines = animal.split('\n')
+        # get how wide the animal is
+        animal_width = len(lines[-1]) - self.offset
+        # recalculate how many steps we can make before turning around
+        self.steps = self.dims[0] - animal_width
+
+        # write and flush the animal to standard OUT
+        sys.stdout.write(animal)
+
+        self.counter += 1
+
+
+if __name__ == "__main__":
+
+    p = ProgressBar()
+    while True:
+        p.step()
+        sleep(0.1)
