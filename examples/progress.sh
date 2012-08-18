@@ -5,7 +5,7 @@ terminal_height=`tput lines`
 index=`od -An -N2 -i /dev/random`
 index=$(( index %= 500 ))
 
-URLBASE="http://localhost"
+URLBASE="http://animals.ivolo.me"
 
 counter=0
 increment=1

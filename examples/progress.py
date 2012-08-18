@@ -5,6 +5,7 @@ import requests
 from random import randint
 from time import sleep
 
+BASE_URL="http://animals.ivolo.me"
 
 # from http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python
 def getTerminalSize():
@@ -40,8 +41,6 @@ def getTerminalSize():
 def next_frame(index=0, offset=0, reverse=False,
     maxwidth=0, maxheight=0, terminal=False):
 
-    ANIMAL_URL = 'http://localhost'
-
     payload = {
         "index": index,
         "offset": offset,
@@ -51,7 +50,7 @@ def next_frame(index=0, offset=0, reverse=False,
         "terminal": terminal
     }
 
-    return requests.get(ANIMAL_URL, params=payload).text
+    return requests.get(BASE_URL, params=payload).text
 
 
 class ProgressBar:
