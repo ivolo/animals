@@ -2,7 +2,6 @@ import requests
 import BeautifulSoup as soup
 
 from os.path import exists
-from random import uniform
 
 SEPERATOR = '===============++++SEPERATOR++++====================\n'
 DEFAULT_FILENAME = 'animals.saved'
@@ -52,19 +51,3 @@ animals = load_animals()
 if animals == None:
     animals = get_animals()
     save_animals(animals)
-
-import fish
-
-
-class CustomLook(fish.MultiLineFishPrinter):
-
-    def __init__(self, s):
-        self.renderable = fish.docstring2lines(s)
-
-    def render(self, step, reverse=False):
-        return self.renderable
-
-    own_length = len(renderable[0])
-
-random_animal = animals[int(uniform(0, len(animals)))]
-
