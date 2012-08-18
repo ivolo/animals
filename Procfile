@@ -1,1 +1,1 @@
-web: sudo node simple.js
+web: node simple.js
