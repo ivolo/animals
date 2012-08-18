@@ -8,11 +8,11 @@ Animal Meetspace.
 ## Try it:
 
 ```bash
-curl -s https://raw.github.com/ivolo/funny/master/examples/progress.sh | sh
+curl -s https://raw.github.com/ivolo/animals/master/examples/progress.sh | sh
 ```
 
 ```bash
-curl -s https://raw.github.com/ivolo/funny/master/examples/progress.py | python
+curl -s https://raw.github.com/ivolo/animals/master/examples/progress.py | python
 ```
 
 ## License
@@ -23,11 +23,13 @@ WWWWWW||WWWWWW
       ||
     ( OO )__________
      /  |           \
-    /o o|W           \
+    /o o|    MIT     \
     \___/||_||__||_|| *
          || ||  || ||
         _||_|| _||_||
        (__|__|(__|__|
-
-(c) 2012
 ```
+
+## Credit
+
+[Heart n Soul](http://www.heartnsoul.com/ascii_art/ascii_animals_indx.htm)
