@@ -11,7 +11,7 @@ Animal Meetspace.
 curl -s https://raw.github.com/ivolo/funny/master/examples/progress.sh | sh
 ```
 
-```bach
+```bash
 curl -s https://raw.github.com/ivolo/funny/master/examples/progress.py | python
 ```
 
