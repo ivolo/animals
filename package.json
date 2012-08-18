@@ -11,6 +11,7 @@
     , "express": "3.X"
   }
   , "engines":{
-    "node": ">0.6.x"
+      "node": ">0.6.x"
+    , "npm": "1.1.8"
   }
 }
