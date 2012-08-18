@@ -2,6 +2,8 @@
 var winston = require('winston');
     server  = require('./server.js');
 
-server.listen(server.port);
+var port = process.env.PORT || server.port;
 
-winston.info('Site server set to port ' + server.port + '!');
+server.listen(port);
+
+winston.info('Site server set to port ' + port + '!');
