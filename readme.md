@@ -5,8 +5,6 @@
 Loading indicator innovation. Enterprise loading solutions. Synergy.
 Animal Meetspace.
 
-Brought to you by [Segment.io](https://segment.io)
-
 ```
  .'"'.        ___,,,___        .'``. 
 : (\  `."'"```         ```"'"-'  /) ;
