@@ -34,9 +34,7 @@ Returns a random ASCII animal.
 
 `maxwidth` (int) - the maximum width of the animal to return
 
-`terminal` (boolean) - specifies whether to return the animal
-
-with ANSI terminal codes that will erase the previous lines.
+`terminal` (boolean) - specifies whether to return the animal with ANSI terminal codes that will erase the previous lines.
 
 
 ### Examples
@@ -70,24 +68,26 @@ with ANSI terminal codes that will erase the previous lines.
 
 ```
 
-`curl http://animals.ivolo.me/?index=10&offset=10&reverse=true`
+`curl http://animals.ivolo.me/?index=130&offset=20&reverse=true`
 ```
-                  _                                                
-                 \\                      |/___\|                   
-                ||              |/_\|    (     )                   
-                 //  .-""""-._,` a a)   =/     \=                  
-                  //\          / =_Y\=    (===)                    
-                   /    /       \`"`     \     /                   
-                    /   | \    |         |     |                   
-                    \  \ -/   \         \       /                  
-                    `/ //  | ||         /       \                  
-          _\/_\/_\/_\//_((\|_((_\/_\/_\/_/_   _\/_\/_\/_sgj        
-                                                                   
+                            _                                                
+                           \\                      |/___\|                   
+                          ||              |/_\|    (     )                   
+                           //  .-""""-._,` a a)   =/     \=                  
+                            //\          / =_Y\=    (===)                    
+                             /    /       \`"`     \     /                   
+                              /   | \    |         |     |                   
+                              \  \ -/   \         \       /                  
+                              `/ //  | ||         /       \                  
+                    _\/_\/_\/_\//_((\|_((_\/_\/_\/_/_   _\/_\/_\/_sgj        
+                                                                             
 ```
 
 ## Host Your Own
 Availability is crucial when dealing with ascii animal web services,
 so go ahead and run your own server for maximum reliability.
+
+### Web Server
 
 ```bash
 npm install
@@ -98,6 +98,9 @@ Using [up](https://github.com/learnboost/up):
 ```bash
 sudo up server.js
 ```
+
+### Generate Animals
+`python scripts/animals.py`
 
 ## Used in Production
 * [Segment.io](https://segment.io)
@@ -117,6 +120,6 @@ WWWWWW||WWWWWW
        (__|__|(__|__|
 ```
 
-## Credit
+## Animal Credit
 
 [Heart n Soul](http://www.heartnsoul.com/ascii_art/ascii_animals_indx.htm)
