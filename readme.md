@@ -21,15 +21,23 @@ It's one call, but its also one hell of a call.
 
 ### `GET /`
 Returns a random ASCII animal.
+
 **Parameters:**
-`index` (int) - the animal index
-If you provide the same number, you'll get the same animal.
-`offset` (int) -  animal offset from the left.
+
+`index` (int) - the animal index - if you provide the same number, you'll get the same animal
+
+`offset` (int) -  animal offset from the left
+
 `reverse` (boolean) - specifies animal direction
-`maxheight` (int) - the maximum height an animal to return.
+
+`maxheight` (int) - the maximum height an animal to return
+
 `maxwidth` (int) - the maximum width of the animal to return
+
 `terminal` (boolean) - specifies whether to return the animal
+
 with ANSI terminal codes that will erase the previous lines.
+
 
 ### Examples
 
