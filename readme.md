@@ -8,11 +8,11 @@ Animal Meetspace.
 ## Try it:
 
 ```bash
-curl -s https://raw.github.com/ivolo/animals/master/examples/progress.sh | sh
+curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh
 ```
 
 ```bash
-curl -s https://raw.github.com/ivolo/animals/master/examples/progress.py | python
+curl -s https://raw.github.com/ivolo/animals/master/examples/loading.py | python
 ```
 
 ## REST API
@@ -82,6 +82,11 @@ Returns a random ASCII animal.
                     _\/_\/_\/_\//_((\|_((_\/_\/_\/_/_   _\/_\/_\/_sgj        
                                                                              
 ```
+
+## Loading Indicator Examples
+
+[Python](https://github.com/ivolo/animals/blob/master/examples/loading.py)
+[Shell](https://github.com/ivolo/animals/blob/master/examples/loading.shell)
 
 ## Host Your Own
 Availability is crucial when dealing with ascii animal web services,
