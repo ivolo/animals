@@ -117,6 +117,7 @@ so go ahead and run your own server for maximum reliability.
 
 ### Web Server
 
+Run the web server:
 ```bash
 npm install
 sudo node simple.js
@@ -126,9 +127,10 @@ Using [up](https://github.com/learnboost/up):
 ```bash
 sudo up server.js
 ```
-
-### Generate Animals
-`python scripts/animals.py`
+And then just:
+```
+python scripts/animals.py
+```
 
 ## Used in Production On
 * [Segment.io](https://segment.io)
@@ -148,6 +150,6 @@ WWWWWW||WWWWWW
        (__|__|(__|__|
 ```
 
-## Animal Credit
+## Animal Credits
 
 [Heart n Soul](http://www.heartnsoul.com/ascii_art/ascii_animals_indx.htm)
