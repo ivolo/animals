@@ -115,21 +115,15 @@ Returns a random ASCII animal.
 Availability is crucial when dealing with ascii animal web services,
 so go ahead and run your own server for maximum reliability.
 
-### Web Server
-
 Run the web server:
 ```bash
-npm install
+npm install .
 sudo node simple.js
 ```
 
 Using [up](https://github.com/learnboost/up):
 ```bash
 sudo up server.js
-```
-And then just:
-```
-python scripts/animals.py
 ```
 
 ## Used in Production On
