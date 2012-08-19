@@ -105,7 +105,7 @@ Returns a random ASCII animal.
                                                                              
 ```
 
-## Loading Indicator Examples
+## Language Examples
 
 [Python](https://github.com/ivolo/animals/blob/master/examples/loading.py)
 
@@ -130,7 +130,7 @@ sudo up server.js
 ### Generate Animals
 `python scripts/animals.py`
 
-## Used in Production
+## Used in Production On
 * [Segment.io](https://segment.io)
 
 ## License
