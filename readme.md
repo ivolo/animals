@@ -24,6 +24,8 @@ Animal Meetspace.
 
 ```
 
+Brought to you by [Segment.io](https://segment.io)
+
 ## Try it yourself:
 
 ```bash
