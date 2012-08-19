@@ -86,6 +86,7 @@ Returns a random ASCII animal.
 ## Loading Indicator Examples
 
 [Python](https://github.com/ivolo/animals/blob/master/examples/loading.py)
+
 [Shell](https://github.com/ivolo/animals/blob/master/examples/loading.shell)
 
 ## Host Your Own

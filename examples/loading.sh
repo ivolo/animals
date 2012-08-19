@@ -12,26 +12,6 @@ increment=1
 offset=0
 steps=10
 
-calculate_max_steps () {
-
-    url=${1}
-
-    animal="`curl -s "$url"`"
-
-    maxlen=0
-
-    export IFS="\n"
-    for word in $animal; do
-        len=`expr length "$word"`
-        if [ $len -gt $maxlen ]
-        then
-            maxlen=$len
-        fi
-    done
-
-    animal_width=$((maxlen - offset))
-    steps=$(( terminal_width - animal_width))
-}
 
 step () {
     offset=$((offset + increment))
