@@ -63,7 +63,7 @@ Returns a random ASCII animal.
 
 ### Examples
 
-`curl http://animals.ivolo.me/`
+`curl -s http://animals.ivolo.me/`
 ```
                      ^`.                        
      ^_              \  \                       
@@ -77,7 +77,7 @@ Returns a random ASCII animal.
                       '._.'                     
                                                 
 ```
-`curl http://animals.ivolo.me/?index=130`
+`curl -s http://animals.ivolo.me/?index=130`
 ```
                                                 _        
                    |\___/|                      \\       
@@ -92,7 +92,7 @@ Returns a random ASCII animal.
 
 ```
 
-`curl http://animals.ivolo.me/?index=130&offset=20&reverse=true`
+`curl -s http://animals.ivolo.me/?index=130&offset=20&reverse=true`
 ```
                             _                                                
                            \\                      |/___\|                   
