@@ -126,11 +126,11 @@ Using [up](https://github.com/learnboost/up):
 up server.js
 ```
 
-## Add Animals
-Animal pull requests are allowed, but subject to the stringent code reviews.
+## Adding Animals
+Pull requests are allowed, but subject to stringent code reviews.
 Add to [animals.saved](https://github.com/ivolo/animals/blob/master/public/assets/animals.saved)
 
-Code Review Lead:
+**Code Review Lead:**
 ```
                 _,--.       ,--._   
                 \  > `-"""-' <  /   
