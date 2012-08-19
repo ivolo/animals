@@ -5,15 +5,37 @@
 Loading indicator innovation. Enterprise loading solutions. Synergy.
 Animal Meetspace.
 
-## Try it:
+```
+ .'"'.        ___,,,___        .'``. 
+: (\  `."'"```         ```"'"-'  /) ;
+ :  \                         `./  .'
+  `.                            :.'  
+    /        _         _        \    
+   |         0}       {0         |   
+   |         /         \         |   
+   |        /           \        |   
+   |       /             \       |   
+    \     |      .-.      |     /    
+     `.   | . . /   \ . . |   .'     
+       `-._\.'.(     ).'./_.-'       
+           `\'  `._.'  '/'           
+             `. --'-- .'             
+               `-...-'               
+
+```
+
+## Try it yourself:
 
 ```bash
 curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh
 ```
 
 ```bash
+pip install requests
 curl -s https://raw.github.com/ivolo/animals/master/examples/loading.py | python
 ```
+
+Please contain your excitement.
 
 ## REST API
 
@@ -24,17 +46,17 @@ Returns a random ASCII animal.
 
 **Parameters:**
 
-`index` (int) - the animal index - if you provide the same number, you'll get the same animal
+`index` (int) - give it the same number, get the same animal. we have around 600 animals.
 
-`offset` (int) -  animal offset from the left
+`offset` (int) -  space offset from the left
 
-`reverse` (boolean) - specifies animal direction
+`reverse` (boolean) - reversed or not
 
 `maxheight` (int) - the maximum height an animal to return
 
 `maxwidth` (int) - the maximum width of the animal to return
 
-`terminal` (boolean) - specifies whether to return the animal with ANSI terminal codes that will erase the previous lines.
+`terminal` (boolean) - whether to return the animal with ANSI terminal codes that will erase the previous lines.
 
 
 ### Examples
@@ -87,7 +109,7 @@ Returns a random ASCII animal.
 
 [Python](https://github.com/ivolo/animals/blob/master/examples/loading.py)
 
-[Shell](https://github.com/ivolo/animals/blob/master/examples/loading.shell)
+[Shell](https://github.com/ivolo/animals/blob/master/examples/loading.sh)
 
 ## Host Your Own
 Availability is crucial when dealing with ascii animal web services,
