@@ -19,21 +19,15 @@ curl -s https://raw.github.com/ivolo/animals/master/examples/progress.py | pytho
 
 It's one call, but its also one hell of a call.
 
-Route `GET /`
+### `GET /`
 Returns a random ASCII animal.
-
-### GET PARAMETERS
-* `index` (int) - the animal index
+**Parameters:**
+`index` (int) - the animal index
 If you provide the same number, you'll get the same animal.
-
 `offset` (int) -  animal offset from the left.
-
 `reverse` (boolean) - specifies animal direction
-
 `maxheight` (int) - the maximum height an animal to return.
-
 `maxwidth` (int) - the maximum width of the animal to return
-
 `terminal` (boolean) - specifies whether to return the animal
 with ANSI terminal codes that will erase the previous lines.
 
@@ -65,7 +59,7 @@ with ANSI terminal codes that will erase the previous lines.
                   /       \         \   /- \  \          
                   \       /         || |  // /`          
         jgs_/\_/\_/\_   _/_/\_/\_/\_((_|\((_//\_/\_/\_/\_
-                                                         
+
 ```
 
 `curl http://animals.ivolo.me/?index=10&offset=10&reverse=true`
