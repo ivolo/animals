@@ -24,7 +24,7 @@ Animal Meetspace.
 
 ```
 
-Brought to you by [Segment.io](https://segment.io)
+Brought to you by [@ivolo](http://twitter.com/ivolo) with rigorous testing by the [Segment.io](https://segment.io) backend team.
 
 ## Try it yourself:
 
