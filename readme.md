@@ -118,12 +118,12 @@ so go ahead and run your own server for maximum reliability.
 Run the web server:
 ```bash
 npm install .
-sudo node simple.js
+node simple.js
 ```
 
 Using [up](https://github.com/learnboost/up):
 ```bash
-sudo up server.js
+up server.js
 ```
 
 ## Used in Production On
