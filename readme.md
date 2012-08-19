@@ -126,6 +126,31 @@ Using [up](https://github.com/learnboost/up):
 up server.js
 ```
 
+## Add Animals
+Animal pull requests are allowed, but subject to the stringent code reviews.
+Add to [animals.saved](https://github.com/ivolo/animals/blob/master/public/assets/animals.saved)
+
+Code Review Lead:
+```
+                _,--.       ,--._   
+                \  > `-"""-' <  /   
+                 `-.         .-'    
+                   / 'e___e` \      
+                  (   (o o)   )     
+                  _\_  `='  _/_     
+                 / /|`-._.-'|\ \    
+                / /||_______||\ \   
+              _/ /_||=======||_\ \_ 
+             / _/==||       ||==\_ \
+             `'(   ^^       ^^   )`'
+                \               /   
+                 \______|______/ 
+                 |______|______|    
+                   )__|   |__(      
+                  /   ]   [   \     
+                  `--'     `--'     
+```
+
 ## Used in Production On
 * [Segment.io](https://segment.io)
 
