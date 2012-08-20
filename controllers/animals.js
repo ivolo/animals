@@ -109,8 +109,6 @@ exports.home = function (req, res, next) {
 
     var ipAddr = ip.get(req);
 
-    winston.info(env + ' - ' + ipAddr);
-
     segmentio.track({
         sessionId: ipAddr,
         userId: null,
