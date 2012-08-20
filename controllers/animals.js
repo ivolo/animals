@@ -1,9 +1,14 @@
 
-var _       = require('underscore');
+var _         = require('underscore');
+var winston   = require('winston');
 
-var animals = require('../lib/animals');
+var segmentio = require('segmentio');
 
+var animals   = require('../lib/animals');
+var ip        = require('../lib/ip');
 
+var env = process.env.NODE_ENV || 'development';
+segmentio.initialize('t5inzlxs', env);
 
 var getNumber = function (req, key) {
 
@@ -101,6 +106,20 @@ exports.home = function (req, res, next) {
 
         animal = ansi + animal;
     }
+
+    var ipAddr = ip.get(req);
+
+    segmentio.track({
+        sessionId: ipAddr,
+        userId: null,
+        event: 'Requested an Animal',
+        properties: {
+            index: index,
+            offset: offset,
+            reverse: reverse,
+            terminal: terminal
+        }
+    });
 
     res.set('Content-Type', 'text/plain; charset=utf-8');
 
