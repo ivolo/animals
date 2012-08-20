@@ -5,7 +5,7 @@ import requests
 from random import randint
 from time import sleep
 
-BASE_URL = "http://localhost"
+BASE_URL = "http://animals.ivolo.me"
 
 
 # from http://stackoverflow.com/questions/566746/how-to-get-console-window-width-in-python
