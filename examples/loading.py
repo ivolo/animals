@@ -1,7 +1,7 @@
 
 import os
 import sys
-import requests
+import urllib
 from random import randint
 from time import sleep
 
@@ -51,7 +51,8 @@ def next_frame(index=0, offset=0, reverse=False,
         "terminal": terminal
     }
 
-    return requests.get(BASE_URL, params=payload).text
+    params = urllib.urlencode(payload)
+    return urllib.urlopen(BASE_URL + "?" + params).read()
 
 
 class ProgressBar:
