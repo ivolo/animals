@@ -9,6 +9,7 @@
       "winston": "*"
     , "underscore": "*"
     , "express": "3.X"
+    , "ascii-art-reverse": "*"
   }
   , "engines":{
       "node": ">0.6.x"
