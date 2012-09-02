@@ -1,5 +1,4 @@
 
-
 # Animals
 
 Loading indicator innovation. Enterprise loading solutions. Synergy.
@@ -33,7 +32,6 @@ curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh
 ```
 
 ```bash
-pip install requests
 curl -s https://raw.github.com/ivolo/animals/master/examples/loading.py | python
 ```
 
