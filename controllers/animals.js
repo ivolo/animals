@@ -7,8 +7,7 @@ var segmentio = require('segmentio');
 var animals   = require('../lib/animals');
 var ip        = require('../lib/ip');
 
-var env = process.env.NODE_ENV || 'production';
-segmentio.initialize('t5inzlxs', env);
+segmentio.init('t5inzlxs');
 
 var getNumber = function (req, key) {
 
