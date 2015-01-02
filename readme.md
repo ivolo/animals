@@ -43,12 +43,12 @@ It's one call, but its also one hell of a call.
 
 Returns a random ASCII animal.
 
-`index` (int) - give it the same number, get the same animal. we have around 600 animals.
-`offset` (int) -  space offset from the left
-`reverse` (boolean) - reversed or not
-`maxheight` (int) - the maximum height an animal to return
-`maxwidth` (int) - the maximum width of the animal to return
-`terminal` (boolean) - whether to return the animal with ANSI terminal codes that will erase the previous lines.
+- `index` (int) - give it the same number, get the same animal. we have around 600 animals.
+- `offset` (int) -  space offset from the left
+- `reverse` (boolean) - reversed or not
+- `maxheight` (int) - the maximum height an animal to return
+- `maxwidth` (int) - the maximum width of the animal to return
+- `terminal` (boolean) - whether to return the animal with ANSI terminal codes that will erase the previous lines.
 
 
 ### Examples
