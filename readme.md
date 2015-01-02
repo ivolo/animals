@@ -26,11 +26,11 @@ Animal Meetspace.
 ## Try it yourself:
 
 ```bash
-curl -s https://raw.github.com/ivolo/animals/master/examples/loading.sh | sh
+curl -s https://raw.githubusercontent.com/ivolo/animals/master/examples/loading.sh | sh
 ```
 
 ```bash
-curl -s https://raw.github.com/ivolo/animals/master/examples/loading.py | python
+curl -s https://raw.githubusercontent.com/ivolo/animals/master/examples/loading.py | python
 ```
 
 Please contain your excitement.

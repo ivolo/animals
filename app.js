@@ -1,8 +1,11 @@
 var koa = require('koa');
 var animals = require('./lib/animals');
 var app = koa();
+app.proxy = true; // support x-forwarded-for as ctx.ip
 var bodyParser = require('koa-bodyparser');
-var logger = require('koa-logger')
+var logger = require('koa-logger');
+var Analytics = require('analytics-node');
+var analytics = new Analytics('e2L9GzC8gZBUv3EMch6jDjvOMaLOv98o');
 
 /**
  * Exports.
@@ -41,6 +44,12 @@ app.use(function *(){
     for (var i = 0; i < dims.height-1; i += 1)
       animal = '\x1b[2K\r' + '\x1b[1F' + animal;
   }
+
+  analytics.track({ 
+    userId: this.ip, 
+    event: 'Requested Animal', 
+    properties: { terminal: terminal, index: index, reverse: reverse }
+  });
 
   this.type = 'text/plain; charset=utf-8';
   this.body = animal;
