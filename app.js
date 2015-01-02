@@ -1,11 +1,16 @@
 var koa = require('koa');
 var animals = require('./lib/animals');
-var app = koa();
-app.proxy = true; // support x-forwarded-for as ctx.ip
 var bodyParser = require('koa-bodyparser');
 var logger = require('koa-logger');
 var Analytics = require('analytics-node');
 var analytics = new Analytics('e2L9GzC8gZBUv3EMch6jDjvOMaLOv98o');
+
+/**
+ * App.
+ */
+
+var app = koa();
+app.proxy = true; // support x-forwarded-for as ctx.ip
 
 /**
  * Exports.
@@ -40,7 +45,6 @@ app.use(function *(){
   // output as many deletion characters as the animal
   if (terminal) {
     var dims = animals.dimensions(animal);
-    var ansi = '';
     for (var i = 0; i < dims.height-1; i += 1)
       animal = '\x1b[2K\r' + '\x1b[1F' + animal;
   }
@@ -56,7 +60,7 @@ app.use(function *(){
 });
 
 /**
- * Parse an integer input.
+ * Parse an input into an integer.
  */
 
 function integer(str, min, max) {
@@ -67,7 +71,7 @@ function integer(str, min, max) {
 }
 
 /**
- * Select the animal.
+ * Select an animal.
  * @param  {Number} index  Animal index to select
  * @param  {Number} width  Max width
  * @param  {Number} height max height
