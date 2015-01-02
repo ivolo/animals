@@ -1,1 +1,1 @@
-web: node simple.js
+web: node --harmony server.js
